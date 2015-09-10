@@ -23,7 +23,7 @@ provided by the Oracle regular expression functions.
     <date>2007-05-13</date>
     <state>stable</state>
     <notes>
-     First sable release
+     First stable release
     </notes>
   </release>
 
@@ -50,7 +50,7 @@ provided by the Oracle regular expression functions.
         int stat;
         char *copy;
 
-        // we have to make sure we have a NUL terminated C string
+        // we have to make sure we have a NULL terminated C string
         // as argument for my_regcomp           
         copy = strndup(pattern, pattern_len);
         stat  = my_regcomp(&data->expr, copy, parse_mode(mode, mode_len), &my_charset_latin1);
@@ -647,7 +647,7 @@ static char *my_regex_replace(const char *pattern,
                1) find out how long the string will be, and allocate buf
                2) copy the part before match, replacement and backrefs to buf
 
-               Jaakko Hyv‰tti <Jaakko.Hyvatti@iki.fi>
+               Jaakko Hyv√§tti <Jaakko.Hyvatti@iki.fi>
                */
 
             new_l = strlen(buf) + subs[0].rm_so; /* part before the match */
